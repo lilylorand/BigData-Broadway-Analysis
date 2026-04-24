@@ -1,0 +1,9 @@
+# create input directory in HDFS
+hdfs dfs -mkdir -p /user/$USER/input
+
+# upload datasets
+hdfs dfs -put -f broadway.csv /user/$USER/input/
+hdfs dfs -put -f Broadway2016_26.csv /user/$USER/input/
+
+# verify files exist
+hdfs dfs -ls /user/$USER/input
